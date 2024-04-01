@@ -42,13 +42,12 @@ app.post("/update-order", requireSession, (req, res) => {
             }
         }
     );
-    console.log(order);
 });
 
 app.get("/get-order", requireSession, function (req, res) {
     var idUser = req.session.user.idUser;
     db.get(
-        "SELECT standing FROM standings WHERE idUser = ? ORDER BY id DESC LIMIT 1",
+        "SELECT standing FROM standings WHERE idUser = ? ORDER BY idStanding DESC LIMIT 1",
         [idUser],
         function (err, row) {
             if (err) {
