@@ -1,0 +1,205 @@
+<div id="overlay" class="fixed inset-0 bg-black opacity-50 z-50 hidden"></div>
+
+<div
+    id="popup"
+    class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg z-50 p-8 hidden"
+>
+    <button
+        id="closeButton"
+        class="absolute top-0 right-0 mt-2 mr-2 focus:outline-none text-gray-600 hover:text-gray-800"
+    >
+        &times;
+    </button>
+    <h2 class="text-lg font-semibold mb-4">Choose an avatar</h2>
+    <div class="grid grid-cols-2 gap-4 overflow-y-auto max-h-96">
+        <img
+            src="/img/drivers/1.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="1"
+        />
+        <img
+            src="/img/drivers/2.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="2"
+        />
+        <img
+            src="/img/drivers/3.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="3"
+        />
+        <img
+            src="/img/drivers/4.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="4"
+        />
+        <img
+            src="/img/drivers/5.jpg"
+            alt="Image 5"
+            class="rounded-lg cursor-pointer"
+            data-value="5"
+        />
+        <img
+            src="/img/drivers/6.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="6"
+        />
+        <img
+            src="/img/drivers/7.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="7"
+        />
+        <img
+            src="/img/drivers/8.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="8"
+        />
+        <img
+            src="/img/drivers/9.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="9"
+        />
+        <img
+            src="/img/drivers/10.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="10"
+        />
+        <img
+            src="/img/drivers/11.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="11"
+        />
+        <img
+            src="/img/drivers/12.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="12"
+        />
+        <img
+            src="/img/drivers/13.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="13"
+        />
+        <img
+            src="/img/drivers/14.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="14"
+        />
+        <img
+            src="/img/drivers/15.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="15"
+        />
+        <img
+            src="/img/drivers/16.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="16"
+        />
+        <img
+            src="/img/drivers/17.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="17"
+        />
+        <img
+            src="/img/drivers/18.jpg"
+            alt="Image 1"
+            class="rounded-lg cursor-pointer"
+            data-value="18"
+        />
+        <img
+            src="/img/drivers/19.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="19"
+        />
+        <img
+            src="/img/drivers/20.jpg"
+            alt="Image 2"
+            class="rounded-lg cursor-pointer"
+            data-value="20"
+        />
+    </div>
+    <button
+        id="validateButton"
+        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg absolute bottom-4 right-4 hidden"
+    >
+        Valider
+    </button>
+</div>
+
+<script>
+    // Récupérer les éléments DOM
+    const popup = document.getElementById("popup");
+    const closeButton = document.getElementById("closeButton");
+    const images = document.querySelectorAll("#popup img");
+    const validateButton = document.getElementById("validateButton");
+    const overlay = document.getElementById("overlay");
+    const openButton = document.getElementById("openButton");
+
+    openButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Empêche le comportement par défaut du lien
+        overlay.classList.remove("hidden");
+        popup.classList.remove("hidden");
+    });
+
+    closeButton.addEventListener("click", function () {
+        overlay.classList.add("hidden");
+        popup.classList.add("hidden");
+    });
+
+    // Ajouter un écouteur d'événements pour le clic sur les images
+    images.forEach((image) => {
+        image.addEventListener("click", function () {
+            // Supprimer la classe 'selected' de toutes les images
+            images.forEach((img) => {
+                img.classList.remove("selected");
+                img.classList.remove("selected-image"); // Supprimer la classe de l'image précédemment sélectionnée
+            });
+            // Ajouter la classe 'selected' à l'image cliquée
+            image.classList.add("selected");
+            image.classList.add("selected-image"); // Ajouter la classe à l'image sélectionnée
+            // Afficher le bouton de validation
+            validateButton.classList.remove("hidden");
+        });
+    });
+
+    // Ajouter un écouteur d'événements pour le clic sur le bouton de validation
+    validateButton.addEventListener("click", function () {
+        const selectedImage = document.querySelector("#popup img.selected");
+        if (selectedImage) {
+            const selectedValue = selectedImage.getAttribute("data-value");
+            //console.log("Image sélectionnée:", selectedValue);
+            popup.classList.add("hidden");
+            overlay.classList.add("hidden");
+            const urlChangePp = "/changepp?idpp=" + String(selectedValue);
+            window.location.href = urlChangePp;
+        }
+    });
+</script>
+
+<style>
+    /* Ajouter une marge à gauche et à droite de la popup */
+    #popup {
+        width: 400px;
+        max-height: 80vh;
+    }
+
+    /* Ajouter un style pour l'image sélectionnée */
+    .selected-image {
+        border: 2px solid blue;
+    }
+</style>
