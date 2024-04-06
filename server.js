@@ -66,6 +66,9 @@ app.use("/", userAuthentification);
 const settingsRoutes = require("./routes/settings");
 app.use("/", settingsRoutes);
 
+const adminRoutes = require("./routes/admin");
+app.use("/", adminRoutes);
+
 app.listen(3000, () => {
     console.log("Serveur connecté");
 });
