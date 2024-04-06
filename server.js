@@ -30,6 +30,7 @@ app.get("/", requireSession, (req, res) => {
     res.render("index", { idpp: req.session.user.idpp });
 });
 
+
 app.post("/update-order", requireSession, (req, res) => {
     var order = JSON.stringify(req.body.order);
     var idUser = req.session.user.idUser;
@@ -63,9 +64,15 @@ app.get("/get-order", requireSession, function (req, res) {
 const userAuthentification = require("./routes/authentification");
 app.use("/", userAuthentification);
 
+app.get("/circuits", requireSession, (req, res) => {
+    res.render("circuits", { idpp: req.session.user.idpp });
+});
+
 const settingsRoutes = require("./routes/settings");
 app.use("/", settingsRoutes);
 
 app.listen(3000, () => {
     console.log("Serveur connecté");
 });
+
+
