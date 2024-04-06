@@ -29,6 +29,9 @@ app.get("/", requireSession, (req, res) => {
     //console.log(req.session.user.idUser);
     res.render("index", { idpp: req.session.user.idpp });
 });
+app.get("/china", requireSession, (req, res) => {
+    res.render("china");
+});
 
 app.post("/update-order", requireSession, (req, res) => {
     var order = JSON.stringify(req.body.order);
