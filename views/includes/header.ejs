@@ -1,57 +1,55 @@
-<header
-    class="flex justify-between items-center py-4 px-8 bg-gray-900 text-white"
->
-    <h1 class="text-2xl font-bold">Truc de F1</h1>
-    <div class="relative">
-        <button id="profileButton" class="focus:outline-none">
-            <img
-                src="/img/drivers/<%= idpp + '.jpg' %>"
-                alt="Image de profil"
-                class="w-10 h-10 rounded-full"
-            />
-        </button>
-        <!-- Menu déroulant -->
-        <div
-            id="dropdownMenu"
-            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
-        >
-            <ul class="py-1">
-                <li>
-                    <a
-                        href="/"
-                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                        >Home</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="/administration"
-                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                        >Admin</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                        >Profil</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="/settings"
-                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                        >Paramètres</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="/logout"
-                        class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                        >Déconnexion</a
-                    >
-                </li>
-            </ul>
+<header class="flex items-center py-4 px-8 bg-gray-900 text-white">
+    <div class="flex-1">
+        <h1 class="text-2xl font-bold">Truc de F1</h1>
+    </div>
+    <div class="flex-1 flex justify-center">
+        <a href="/circuits" class="text-white bg-blue-500 py-2 px-4 rounded hover:bg-blue-600">circuits</a>
+    </div>
+    <div class="flex-1 flex justify-end">
+        <div class="relative">
+            <button id="profileButton" class="focus:outline-none">
+                <img
+                    src="/img/drivers/<%= idpp + '.jpg' %>"
+                    alt="Image de profil"
+                    class="w-10 h-10 rounded-full"
+                />
+            </button>
+            <!-- Menu déroulant -->
+            <div
+                id="dropdownMenu"
+                class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg"
+            >
+                <ul class="py-1">
+                    <li>
+                        <a
+                            href="/"
+                            class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                            >Profil</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/settings"
+                            class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                            >Paramètres</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/logout"
+                            class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                            >Déconnexion</a
+                        >
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>
