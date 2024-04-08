@@ -66,6 +66,10 @@ app.get("/get-order", requireSession, function (req, res) {
 const userAuthentification = require("./routes/authentification");
 app.use("/", userAuthentification);
 
+app.get("/pilotes", requireSession, async(req, res) => {
+    res.render("pilotes", { idpp: req.session.user.idpp });
+});
+
 app.get("/circuits", requireSession, async (req, res) => {
     var results;
     await new Promise((resolve, reject) => {
