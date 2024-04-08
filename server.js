@@ -33,7 +33,6 @@ app.get("/china", requireSession, (req, res) => {
     res.render("china");
 });
 
-
 app.post("/update-order", requireSession, (req, res) => {
     var order = JSON.stringify(req.body.order);
     var idUser = req.session.user.idUser;
@@ -67,8 +66,19 @@ app.get("/get-order", requireSession, function (req, res) {
 const userAuthentification = require("./routes/authentification");
 app.use("/", userAuthentification);
 
-app.get("/circuits", requireSession, (req, res) => {
-    res.render("circuits", { idpp: req.session.user.idpp });
+app.get("/circuits", requireSession, async (req, res) => {
+    var results;
+    await new Promise((resolve, reject) => {
+        db.all("SELECT * FROM tracks", function (err, row) {
+            if (err) {
+                reject(err);
+            } else {
+                results = row;
+                resolve(row);
+            }
+        });
+    });
+    res.render("circuits", { idpp: req.session.user.idpp, tracks: results });
 });
 
 const settingsRoutes = require("./routes/settings");
@@ -80,5 +90,3 @@ app.use("/", adminRoutes);
 app.listen(3000, () => {
     console.log("Serveur connecté");
 });
-
-
