@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>teams</title>
+</head>
+<body class="bg-gray-100">
+<%- include('includes/header.ejs') %>
+<main class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Début du bloc pour l'écurie Mercedes -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/merco.png" alt="Mercedes Logo" class="object-contain h-32">
+                </div>
+                <img src="img/cars/mercedes-f1-w15-4.png" alt="Mercedes W15" class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/germany.png" alt="Germany Flag" class="w-6 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Mercedes</h2>
+                    </div>
+                    <p class="text-gray-700">Mercedes W15</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Brackley  </p>
+                        <img src="img/flag/UK.png" class="w-6 h-4 ml-2">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">44</div>
+                        <span>Lewis Hamilton</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">63</div>
+                        <span>George Russell</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début du bloc Ferrari-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/ferrari.png" alt="Ferrari Logo" class="object-contain h-32">
+                </div>
+                <img src="img/cars/ferrari-sf-24-4.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/italy.png" alt="Italy Flag" class="w-6 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Ferrari</h2>
+                    </div>
+                    <p class="text-gray-700">Ferrari SF24</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Maranello</p>
+                        <img src="img/flag/italy.png" class="w-6 h-4 ml-2">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">55</div>
+                        <span>Carlos Sainz</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">16</div>
+                        <span>Charles Leclerc</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début du bloc Red Bull-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/RB.png" alt="RedBull logo" class="object-contain h-32">
+                </div>
+                <img src="img/cars/red-bull-racing-honda-rbpt-rb2-4.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/autriche.png"  class="w-6 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">RedBull</h2>
+                    </div>
+                    <p class="text-gray-700">RedBull RB20</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Milton Keynes</p>
+                        <img src="img/flag/UK.png" class="w-6 h-4 ml-2">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">33</div>
+                        <span>Max Verstappen</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">11</div>
+                        <span>Sergio Perez</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début du bloc McLaren-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/McLaren.png" alt="McLaren logo" class="object-contain h-32">
+                </div>
+                <img src="img/cars/mclaren-mercedes-mcl38-12.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/UK.png"  class="w-6 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">McLaren</h2>
+                    </div>
+                    <p class="text-gray-700">McLaren MCL38</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Woking </p>
+                        <img src="img/flag/UK.png" class="w-6 h-4 ml-2">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">4</div>
+                        <span>Lando Norris</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">81</div>
+                        <span>Oscar Piastri</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début du bloc Alpine-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/alpine.png" class="object-contain h-32">
+                </div>
+                <img src="img/cars/alpine-renault-a524-4.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/france.png"  class="w-6 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Alpine</h2>
+                    </div>
+                    <p class="text-gray-700">Alpine A524</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Enstone</p>
+                        <img src="img/flag/UK.png" class="w-6 h-4">
+                        <p class="text-gray-700">Viry-Châtillon</p>
+                        <img src="img/flag/france.png" class="w-6 h-4 ">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">10</div>
+                        <span>Pierre Gasly</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">31</div>
+                        <span>Esteban Ocon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début du bloc Aston Martin-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/aston_martin.png"  class="object-contain h-32">
+                </div>
+                <img src="img/cars/aston-martin-aramco-mercedes-a-4.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/UK.png"  class="w-6 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Aston Martin</h2>
+                    </div>
+                    <p class="text-gray-700">Aston Martin AMR24</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Silverstone</p>
+                        <img src="img/flag/UK.png" class="w-6 h-4 ml-2">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">14</div>
+                        <span>Fernando Alonso</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">18</div>
+                        <span>Lance Stroll</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début du bloc Stake F1-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/sauber.png"  class="object-contain h-32">
+                </div>
+                <img src="img/cars/kick-sauber-ferrari-c44.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/suisse.png"  class="w-5 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Sauber</h2>
+                    </div>
+                    <p class="text-gray-700">Sauber C44</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Hinwil </p>
+                        <img src="img/flag/suisse.png" class="w-5 h-4 ml-2">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">77</div>
+                        <span>Valterri Bottas</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">24</div>
+                        <span>Guanyu Zhou</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Début du bloc Haas F1-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/haas.png"  class="object-contain h-32">
+                </div>
+                <img src="img/cars/haas-ferrari-vf-24-2.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/USA.png"  class="w-5 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Haas</h2>
+                    </div>
+                    <p class="text-gray-700">Haas VF24</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Kannapolis</p>
+                        <img src="img/flag/USA.png" class="w-5 h-4 ml-2">
+                        <P class="text-gray-700">Banbury</P>
+                        <img src="img/flag/UK.png" class="w-5 h-4 ml-2">
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">27</div>
+                        <span>Nico Hülkenberg</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">20</div>
+                        <span>Kevin Magnussen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Début du bloc Williams-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/williams.png"  class="object-contain h-32">
+                </div>
+                <img src="img/cars/williams-mercedes-fw46-7.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/UK.png"  class="w-5 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Williams</h2>
+                    </div>
+                    <p class="text-gray-700">Williams FW46</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Grove</p>
+                        <img src="img/flag/UK.png" class="w-5 h-4 ml-2">                 
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">23</div>
+                        <span>Alexander Albon</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">2</div>
+                        <span>Logan Sargeant</span>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        
+        <!--Début du bloc pour Racing Bulls-->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-center">
+                    <img src="img/logo/VSRB.png"  class="object-contain h-32">
+                </div>
+                <img src="img/cars/rb-honda-rbpt-2.png"  class="object-cover">
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <img src="img/flag/italy.png"  class="w-5 h-4 mr-2">
+                        <h2 class="text-xl font-semibold mb-1">Racing Bulls</h2>
+                    </div>
+                    <p class="text-gray-700">Racing Bulls VCARB 01</p>
+                    <div class="flex items-center">
+                        <p class="text-gray-700">Headquarters : Faenza</p>
+                        <img src="img/flag/italy.png" class="w-5 h-4 ml-2">                 
+                    </div>
+                    <p class="text-gray-700 font-bold mt-4 mb-1">Pilotes:</p>
+                    <div class="flex items-center mb-1">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">22</div>
+                        <span>Yuki Tsunoda</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-gray-700 font-bold text-sm bg-gray-200 px-2 py-1 rounded-full mr-2">3</div>
+                        <span>Danniel Ricciardo</span>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        
+
+        <!-- Répéter ce bloc pour chaque écurie en modifiant les informations spécifiques -->
+
+
+    </div>
+</main>
+</body>
+</html>

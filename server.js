@@ -70,6 +70,10 @@ app.get("/pilotes", requireSession, async(req, res) => {
     res.render("pilotes", { idpp: req.session.user.idpp });
 });
 
+app.get("/teams", requireSession, async(req, res) => {
+    res.render("teams", { idpp: req.session.user.idpp });
+});
+
 app.get("/circuits", requireSession, async (req, res) => {
     var results;
     await new Promise((resolve, reject) => {
