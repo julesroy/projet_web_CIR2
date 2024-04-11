@@ -2,28 +2,31 @@
     <div class="flex-1">
         <h1 class="text-2xl font-bold">Truc de F1</h1>
     </div>
-    <div class="flex-1 flex justify-center">
-        <a
-            href="/circuits"
-            class="text-white bg-blue-500 py-2 px-4 rounded hover:bg-blue-600"
-            >circuits</a
-        >
-    </div>
+    <div class="flex justify-center items-center gap-10">
+        <div class="flex-1 flex justify-center">
+            <a
+                href="/circuits"
+                class="text-white py-2 px-4 rounded hover:bg-blue-600 btn-header"
+                >Circuits</a
+            >
+        </div>
 
-    <div class="flex-1 flex justify-center">
-        <a
-            href="/pilotes"
-            class="text-white bg-blue-500 py-2 px-4 rounded hover:bg-blue-600"
-            >pilotes</a
-        >
-    </div>
+        <div class="flex-1 flex justify-center">
+            <a
+                href="/pilotes"
+                class="text-white py-2 px-4 rounded hover:bg-blue-600 btn-header"
+                >Pilotes</a
+            >
+        </div>
 
-    <div class="flex-1 flex justify-center">
-        <a
-            href="/teams"
-            class="text-white bg-blue-500 py-2 px-4 rounded hover:bg-blue-600"
-            >teams</a
-        >
+        <div class="flex-1 flex justify-center">
+            <a
+                href="/teams"
+                class="text-white py-2 px-4 rounded hover:bg-blue-600 btn-header"
+                >Teams</a
+            >
+        </div>
+    </div>
     <div class="flex-1 flex justify-end">
         <div class="relative">
             <button id="profileButton" class="focus:outline-none">
@@ -55,13 +58,6 @@
                     </li>
                     <li>
                         <a
-                            href="#"
-                            class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                            >Profil</a
-                        >
-                    </li>
-                    <li>
-                        <a
                             href="/settings"
                             class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                             >Paramètres</a
@@ -87,3 +83,9 @@
             document.getElementById("dropdownMenu").classList.toggle("hidden");
         });
 </script>
+
+<style>
+    .btn-header {
+        background-color: #4a919e;
+    }
+</style>

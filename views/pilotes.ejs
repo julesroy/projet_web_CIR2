@@ -9,57 +9,89 @@
     <body class="bg-gray-100">
         <%- include('includes/header.ejs') %>
         <main class="container mx-auto px-4 py-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+            >
                 <!-- Début d'un bloc pour un pilote -->
-                <!-- Bloc pour le pilote 1 -->             
+                <!-- Bloc pour le pilote 1 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/lewis.png" alt="Lewis Hamilton" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/lewis.png"
+                        alt="Lewis Hamilton"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/mercedes.png')] bg-center bg-no-repeat bg-contain opacity-10">                            
-                        </div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/mercedes.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Lewis Hamilton</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Lewis Hamilton
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Mercedes</p>
                             <p class="text-gray-700 mb-2">Numéro: 44</p>
                             <p class="text-gray-700 mb-2">Pays: Royaume-Uni</p>
-                            <p class="text-gray-700 mb-2">Victoires: 104 (record)</p>
-                            <p class="text-gray-700 mb-2">Podiums: 197 (record)</p>
+                            <p class="text-gray-700 mb-2">
+                                Victoires: 104 (record)
+                            </p>
+                            <p class="text-gray-700 mb-2">
+                                Podiums: 197 (record)
+                            </p>
                             <p class="text-gray-700 mb-2">Début en F1: 2007</p>
-                            <p class="text-gray-700 mb-2">Championnats: 7 (record)</p>
+                            <p class="text-gray-700 mb-2">
+                                Championnats: 7 (record ex aequo)
+                            </p>
                         </div>
                     </div>
                 </div>
 
-
                 <!-- Bloc pour le pilote 2 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/russel.jpg" alt="George Russel" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/russel.jpg"
+                        alt="George Russel"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/mercedes.png')] bg-center bg-no-repeat bg-contain opacity-10">
-                        </div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/mercedes.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">George Russel</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                George Russel
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Mercedes</p>
                             <p class="text-gray-700 mb-2">Numéro: 63</p>
                             <p class="text-gray-700 mb-2">Pays: Royaume-Uni</p>
                             <p class="text-gray-700 mb-2">Victoires: 1</p>
                             <p class="text-gray-700 mb-2">Podiums: 12</p>
-                            <p class="text-gray-700 mb-2">Début en F1: 2019</p> 
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 4e</p>     
-                        </div>                    
+                            <p class="text-gray-700 mb-2">Début en F1: 2019</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 4e
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 3 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/max.jpg" alt="Max Verstappen" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/max.jpg"
+                        alt="Max Verstappen"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/RB.png')] bg-center bg-no-repeat bg-contain opacity-10">
-                        </div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/RB.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Max Verstappen</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Red Bull Racing</p>
-                            <p class="text-gray-700 mb-2">Numéro: 33</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Max Verstappen
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Red Bull Racing
+                            </p>
+                            <p class="text-gray-700 mb-2">Numéro: 1</p>
                             <p class="text-gray-700 mb-2">Pays: Pays-Bas</p>
                             <p class="text-gray-700 mb-2">Victoires: 57</p>
                             <p class="text-gray-700 mb-2">Podiums: 101</p>
@@ -71,31 +103,52 @@
 
                 <!-- Bloc pour le pilote 4 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/sergio.jpg" alt="Sergio Perez" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/sergio.jpg"
+                        alt="Sergio Perez"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/RB.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/RB.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Sergio Perez</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Red Bull Racing</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Sergio Perez
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Red Bull Racing
+                            </p>
                             <p class="text-gray-700 mb-2">Numéro: 11</p>
                             <p class="text-gray-700 mb-2">Pays: Mexique</p>
                             <p class="text-gray-700 mb-2">Victoires: 6</p>
                             <p class="text-gray-700 mb-2">Podiums: 35</p>
-                            <p class="text-gray-700 mb-2">Début en F1: 2011</p> 
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 2e</p>  
-                        </div>                      
+                            <p class="text-gray-700 mb-2">Début en F1: 2011</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 2e
+                            </p>
+                        </div>
                     </div>
                 </div>
-                
 
                 <!-- Bloc pour le pilote 5 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/fernando.png" alt="Fernando Alonso" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/fernando.png"
+                        alt="Fernando Alonso"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/aston_martin.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/aston_martin.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Fernando Alonso</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Aston Martin</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Fernando Alonso
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Aston Martin
+                            </p>
                             <p class="text-gray-700 mb-2">Numéro: 14</p>
                             <p class="text-gray-700 mb-2">Pays: Espagne</p>
                             <p class="text-gray-700 mb-2">Victoires: 32</p>
@@ -108,276 +161,436 @@
 
                 <!-- Bloc pour le pilote Lance Stroll -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/stroll.jpg" alt="Lance Stroll" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/stroll.jpg"
+                        alt="Lance Stroll"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/aston_martin.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/aston_martin.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Lance Stroll</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Aston Martin</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Lance Stroll
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Aston Martin
+                            </p>
                             <p class="text-gray-700 mb-2">Numéro: 18</p>
                             <p class="text-gray-700 mb-2">Pays: Canada</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 3</p>
-                            <p class="text-gray-700 mb-2">Début en F1: 2017</p>    
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 10e</p>                    
+                            <p class="text-gray-700 mb-2">Début en F1: 2017</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 10e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote Charles Leclerc -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/leclerc.jpg" alt="Charles Leclerc" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/leclerc.jpg"
+                        alt="Charles Leclerc"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/ferrari.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/ferrari.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Charles Leclerc</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Charles Leclerc
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Ferrari</p>
                             <p class="text-gray-700 mb-2">Numéro: 16</p>
                             <p class="text-gray-700 mb-2">Pays: Monaco</p>
                             <p class="text-gray-700 mb-2">Victoires: 5</p>
                             <p class="text-gray-700 mb-2">Podiums: 32</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2018</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 2e</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 2e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 8-->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/carlos.jpg" alt="Carlos Sainz" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/carlos.jpg"
+                        alt="Carlos Sainz"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/ferrari.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/ferrari.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Carlos Sainz</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Carlos Sainz
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Ferrari</p>
                             <p class="text-gray-700 mb-2">Numéro: 55</p>
                             <p class="text-gray-700 mb-2">Pays: Espagne</p>
                             <p class="text-gray-700 mb-2">Victoires: 3</p>
                             <p class="text-gray-700 mb-2">Podiums: 21</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2015</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 5e</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 5e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 9 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/Ricciardo.jpg" alt="Daniel Ricciardo" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/ricciardo.jpg"
+                        alt="Daniel Ricciardo"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/VSRB.png')] bg-center bg-no-repeat bg-contain opacity-40"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/VSRB.png')] bg-center bg-no-repeat bg-contain opacity-40"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Daniel Ricciardo</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Visa Cash App Racing Bulls Formula One Team</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Daniel Ricciardo
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Visa Cash App Racing Bulls Formula One
+                                Team
+                            </p>
                             <p class="text-gray-700 mb-2">Numéro: 3</p>
                             <p class="text-gray-700 mb-2">Pays: Australie</p>
                             <p class="text-gray-700 mb-2">Victoires: 8</p>
                             <p class="text-gray-700 mb-2">Podiums: 32</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2011</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 3e</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 3e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 10 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/yuki.jpg" alt="Yuki Tsunoda" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/yuki.jpg"
+                        alt="Yuki Tsunoda"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/VSRB.png')] bg-center bg-no-repeat bg-contain opacity-40"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/VSRB.png')] bg-center bg-no-repeat bg-contain opacity-40"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Yuki Tsunoda</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Visa Cash App Racing Bulls Formula One Team</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Yuki Tsunoda
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Visa Cash App Racing Bulls Formula One
+                                Team
+                            </p>
                             <p class="text-gray-700 mb-2">Numéro: 22</p>
                             <p class="text-gray-700 mb-2">Pays: Japon</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 0</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2021</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 14e</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 14e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 11 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/norris.jpg" alt="Lando Norris" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/norris.jpg"
+                        alt="Lando Norris"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/McLaren.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/McLaren.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Lando Norris</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Lando Norris
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: McLaren</p>
                             <p class="text-gray-700 mb-2">Numéro: 4</p>
                             <p class="text-gray-700 mb-2">Pays: Royaume-Uni</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 14</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2019</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 6e</p>
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 6e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 12 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/piastri.png" alt="Oscar Piastri" class="w-full h-48 object-contain">
+                    <img
+                        src="img/pilotes/piastri.png"
+                        alt="Oscar Piastri"
+                        class="w-full h-48 object-contain"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/McLaren.png')] bg-center bg-no-repeat bg-contain opacity-10"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/McLaren.png')] bg-center bg-no-repeat bg-contain opacity-10"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Oscar Piastri</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Oscar Piastri
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: McLaren</p>
                             <p class="text-gray-700 mb-2">Numéro: 31</p>
                             <p class="text-gray-700 mb-2">Pays: Australie</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 2</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2021</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 9e</p>                            
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 9e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 13 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/magnussen.jpg" alt="Kevin Magnussen" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/magnussen.jpg"
+                        alt="Kevin Magnussen"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/haas.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/haas.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Kevin Magnussen</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Kevin Magnussen
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Haas</p>
                             <p class="text-gray-700 mb-2">Numéro: 20</p>
                             <p class="text-gray-700 mb-2">Pays: Danemark</p>
-                            <p class="text-gray-700 mb-2">Victoires:  0</p>
+                            <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 1</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2014</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 9e</p>                            
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 9e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 14 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/nico.jpg" alt="Nico Hulkenberg" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/nico.jpg"
+                        alt="Nico Hulkenberg"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/haas.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/haas.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Nico Hulkenberg</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Nico Hulkenberg
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Haas</p>
                             <p class="text-gray-700 mb-2">Numéro: 27</p>
                             <p class="text-gray-700 mb-2">Pays: Allemagne</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 0</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2010</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 7e</p>                                                        
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 7e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 15 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/Valterri.jpg" alt="Valterri Bottas" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/valterri.jpg"
+                        alt="Valterri Bottas"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/sauber.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/sauber.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Valterri Bottas</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Stake F1 Team Kick Sauber</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Valterri Bottas
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Stake F1 Team Kick Sauber
+                            </p>
                             <p class="text-gray-700 mb-2">Numéro: 77</p>
                             <p class="text-gray-700 mb-2">Pays: Finlande</p>
                             <p class="text-gray-700 mb-2">Victoires: 10</p>
                             <p class="text-gray-700 mb-2">Podiums: 67</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2013</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 2e</p>                                                        
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 2e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 16 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/zhou.jpg" alt="Guanyu Zhou" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/zhou.jpg"
+                        alt="Guanyu Zhou"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/sauber.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/sauber.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Guanyu Zhou</h2>
-                            <p class="text-gray-700 mb-2">Équipe: Stake F1 Team Kick Sauber</p>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Guanyu Zhou
+                            </h2>
+                            <p class="text-gray-700 mb-2">
+                                Équipe: Stake F1 Team Kick Sauber
+                            </p>
                             <p class="text-gray-700 mb-2">Numéro: 24</p>
                             <p class="text-gray-700 mb-2">Pays: Chine</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 0</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2022</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 18e</p>                                                                                   
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 18e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 17 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/albon.jpg" alt="Alexander Albon" class="w-full h-48 object-cover">
+                    <img
+                        src="img/pilotes/albon.jpg"
+                        alt="Alexander Albon"
+                        class="w-full h-48 object-cover"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/williams.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/williams.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Alexander Albon</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Alexander Albon
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Williams</p>
                             <p class="text-gray-700 mb-2">Numéro: 23</p>
                             <p class="text-gray-700 mb-2">Pays: Thaïlande</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 2</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2019</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 7e</p>                                                                                   
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 7e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 18 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/logan.jpg" alt="Logan Sargeant" class="w-full h-48 object-contain">
+                    <img
+                        src="img/pilotes/logan.jpg"
+                        alt="Logan Sargeant"
+                        class="w-full h-48 object-contain"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/williams.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/williams.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Logan Sargeant</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Logan Sargeant
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Williams</p>
                             <p class="text-gray-700 mb-2">Numéro: 2</p>
                             <p class="text-gray-700 mb-2">Pays: États-Unis</p>
                             <p class="text-gray-700 mb-2">Victoires: 0</p>
                             <p class="text-gray-700 mb-2">Podiums: 0</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2023</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 21e</p>                                                                                   
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 21e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 19 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/ocon.jpg" alt="Esteban Ocon" class="w-full h-48 object-contain">
+                    <img
+                        src="img/pilotes/ocon.jpg"
+                        alt="Esteban Ocon"
+                        class="w-full h-48 object-contain"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/alpine.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/alpine.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Esteban Ocon</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Esteban Ocon
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Alpine</p>
                             <p class="text-gray-700 mb-2">Numéro: 31</p>
                             <p class="text-gray-700 mb-2">Pays: France</p>
                             <p class="text-gray-700 mb-2">Victoires: 1</p>
                             <p class="text-gray-700 mb-2">Podiums: 3</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2016</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 8e</p>                                                                                                           
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 8e
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bloc pour le pilote 20 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="img/pilotes/gasly.jpg" alt="Pierre Gasly" class="w-full h-48 object-contain">
+                    <img
+                        src="img/pilotes/gasly.jpg"
+                        alt="Pierre Gasly"
+                        class="w-full h-48 object-contain"
+                    />
                     <div class="p-4 relative">
-                        <div class="absolute inset-0 bg-[url('/img/logo/alpine.png')] bg-center bg-no-repeat bg-contain opacity-20"></div>
+                        <div
+                            class="absolute inset-0 bg-[url('/img/logo/alpine.png')] bg-center bg-no-repeat bg-contain opacity-20"
+                        ></div>
                         <div class="relative">
-                            <h2 class="text-xl font-semibold mb-2">Pierre Gasly</h2>
+                            <h2 class="text-xl font-semibold mb-2">
+                                Pierre Gasly
+                            </h2>
                             <p class="text-gray-700 mb-2">Équipe: Alpine</p>
                             <p class="text-gray-700 mb-2">Numéro: 10</p>
                             <p class="text-gray-700 mb-2">Pays: France</p>
                             <p class="text-gray-700 mb-2">Victoires: 1</p>
                             <p class="text-gray-700 mb-2">Podiums: 4</p>
                             <p class="text-gray-700 mb-2">Début en F1: 2017</p>
-                            <p class="text-gray-700 mb-2">Meilleur classement Championnat : 10e</p>                                                                                                                                      
+                            <p class="text-gray-700 mb-2">
+                                Meilleur classement Championnat : 10e
+                            </p>
                         </div>
                     </div>
                 </div>
-
-                
-                
+            </div>
         </main>
     </body>
 </html>
