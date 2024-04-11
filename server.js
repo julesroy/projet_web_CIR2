@@ -89,6 +89,10 @@ app.get("/circuits", requireSession, async (req, res) => {
     res.render("circuits", { idpp: req.session.user.idpp, tracks: results });
 });
 
+app.get("/classement", requireSession, async (req, res) => {
+    res.render("classement", { idpp: req.session.user.idpp});
+});
+
 const settingsRoutes = require("./routes/settings");
 app.use("/", settingsRoutes);
 
