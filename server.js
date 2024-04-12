@@ -26,19 +26,33 @@ app.use(
 );
 
 app.get("/", requireSession, (req, res) => {
-    //console.log(req.session.user.idUser);
     res.render("index", { idpp: req.session.user.idpp });
 });
 app.get("/china", requireSession, (req, res) => {
     res.render("china");
 });
 
-app.post("/update-order", requireSession, (req, res) => {
+app.post("/update-order", requireSession, async (req, res) => {
+    var idActualRace;
+    await new Promise((resolve, reject) => {
+        db.get(
+            `SELECT idRace FROM races WHERE actual = 1`,
+            function (err, row) {
+                if (err) {
+                    reject(err);
+                } else {
+                    idActualRace = row.idRace;
+                    resolve(row);
+                }
+            }
+        );
+    });
+
     var order = JSON.stringify(req.body.order);
     var idUser = req.session.user.idUser;
     db.run(
-        "INSERT INTO standings(standing, idUser) VALUES(?, ?)",
-        [order, idUser],
+        "INSERT INTO standings(standing, idUser, idRace) VALUES(?, ?, ?)",
+        [order, idUser, idActualRace],
         function (err) {
             if (err) {
                 res.send(err.message);
@@ -66,11 +80,11 @@ app.get("/get-order", requireSession, function (req, res) {
 const userAuthentification = require("./routes/authentification");
 app.use("/", userAuthentification);
 
-app.get("/pilotes", requireSession, async(req, res) => {
+app.get("/pilotes", requireSession, async (req, res) => {
     res.render("pilotes", { idpp: req.session.user.idpp });
 });
 
-app.get("/teams", requireSession, async(req, res) => {
+app.get("/teams", requireSession, async (req, res) => {
     res.render("teams", { idpp: req.session.user.idpp });
 });
 

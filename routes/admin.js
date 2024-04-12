@@ -40,6 +40,95 @@ router.get("/validate-result", requireSession, (req, res) => {
         .then((idActualRace) => {
             idActualRace = idActualRace.idRace;
             return new Promise((resolve, reject) => {
+                db.all(
+                    `SELECT s.*
+                    FROM standings s
+                    INNER JOIN (
+                        SELECT idUser, MAX(idStanding) as MaxId
+                        FROM standings
+                        WHERE idRace = ?
+                        GROUP BY idUser
+                    ) ss ON s.idUser = ss.idUser AND s.idStanding = ss.MaxId WHERE s.idRace = ?`,
+                    [idActualRace, idActualRace],
+                    (err, rows) => {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            resolve({ rows, idActualRace });
+                        }
+                    }
+                );
+            });
+        })
+        .then(({ rows, idActualRace }) => {
+            return new Promise((resolve, reject) => {
+                db.get(
+                    `SELECT * FROM results WHERE idRace = ? ORDER BY idResult DESC LIMIT 1`,
+                    [idActualRace],
+                    (err, resultRace) => {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            resolve({
+                                rows,
+                                idActualRace,
+                                resultRace,
+                            });
+                        }
+                    }
+                );
+            });
+        })
+        .then(({ rows, idActualRace, resultRace }) => {
+            var referenceResultat = JSON.parse(resultRace.standings);
+            return Promise.all(
+                rows.map((element) => {
+                    var score = 0;
+                    const standing = JSON.parse(element.standing);
+
+                    for (let i = 0; i < standing.length; i++) {
+                        const expectedIndex = referenceResultat.indexOf(
+                            standing[i]
+                        );
+
+                        // Vérifier les positions autour de l'index attendu dans une plage de ±2
+                        for (
+                            let j = expectedIndex - 2;
+                            j <= expectedIndex + 2;
+                            j++
+                        ) {
+                            if (
+                                j >= 0 &&
+                                j < standing.length &&
+                                standing[j] === referenceResultat[i]
+                            ) {
+                                // Calculer les points en fonction de la distance par rapport à l'index attendu
+                                const distance = Math.abs(expectedIndex - j);
+                                const pointsToAdd = Math.max(0, 10 - distance);
+                                score += pointsToAdd;
+                                break; // Sortir de la boucle si on a trouvé un élément correspondant
+                            }
+                        }
+                    }
+
+                    return new Promise((resolve, reject) => {
+                        db.run(
+                            `INSERT INTO points(points, idRace, idUser) VALUES(?, ?, ?)`,
+                            [score, element.idRace, element.idUser],
+                            (err) => {
+                                if (err) {
+                                    reject(err);
+                                } else {
+                                    resolve(idActualRace);
+                                }
+                            }
+                        );
+                    });
+                })
+            );
+        })
+        .then((idActualRace) => {
+            return new Promise((resolve, reject) => {
                 db.run(
                     "UPDATE races SET actual = 0, finished = 1 WHERE actual = 1",
                     (err) => {
@@ -56,12 +145,13 @@ router.get("/validate-result", requireSession, (req, res) => {
             return new Promise((resolve, reject) => {
                 db.run(
                     "UPDATE races SET actual = 1, finished = 0 WHERE idRace = ?",
-                    idActualRace + 1,
+                    (idActualRace = idActualRace[0] + 1),
                     (err) => {
                         if (err) {
                             reject(err);
                         } else {
-                            resolve();
+                            console.log(idActualRace);
+                            resolve(idActualRace);
                         }
                     }
                 );
