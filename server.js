@@ -25,11 +25,12 @@ app.use(
     })
 );
 
-app.get("/", requireSession, (req, res) => {
-    res.render("index", { idpp: req.session.user.idpp });
-});
-app.get("/china", requireSession, (req, res) => {
-    res.render("china");
+app.get("/", requireSession, async (req, res) => {
+    var race = await getActualRace();
+    res.render("index", {
+        idpp: req.session.user.idpp,
+        nextRaceInformation: race,
+    });
 });
 
 app.post("/update-order", requireSession, async (req, res) => {
@@ -115,6 +116,7 @@ app.get("/classement", requireSession, async (req, res) => {
             }
         });
     });
+
     // Calculer le total de points pour chaque utilisateur
     const userPoints = {};
     data.forEach((entry) => {
@@ -139,6 +141,7 @@ const settingsRoutes = require("./routes/settings");
 app.use("/", settingsRoutes);
 
 const adminRoutes = require("./routes/admin");
+const getActualRace = require("./utils/getActualRace");
 app.use("/", adminRoutes);
 
 app.listen(3000, () => {

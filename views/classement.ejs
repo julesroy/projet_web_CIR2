@@ -3,11 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/img/logo/f1.svg" type="image/x-icon" />
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Classement</title>
     </head>
     <body>
         <%- include('./includes/header.ejs') %>
+        <br />
+        <div class="flex justify-center text-2xl">Classement total</div>
         <main class="flex flex-col items-center">
             <% tableauClassement.forEach(element => { %>
             <div
