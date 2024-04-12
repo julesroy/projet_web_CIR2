@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Classement</title>
-</head>
-<body>
-    <%- include('./includes/header.ejs') %>
-    <main class="flex flex-col items-center">
-        <div class="w-1/2 mt-8 flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-6 sm:justify-between">
-            <p>id: maxime   rate: 1er   nb_point: 350</p>
-        </div>
-        <div class="w-1/2 mt-8 flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-6 sm:justify-between">
-            <p>id: jules   rate: 2eme   nb_point: 250</p>
-        </div>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Classement</title>
+    </head>
+    <body>
+        <%- include('./includes/header.ejs') %>
+        <main class="flex flex-col items-center">
+            <% tableauClassement.forEach(element => { %>
+            <div
+                class="w-1/2 mt-8 flex items-center gap-4 rounded-lg border border-gray-100 bg-white p-6 sm:justify-between"
+            >
+                <span>id: <%= element[0] %></span
+                ><span><%= element[1] %> points</span>
+            </div>
+            <% }); %>
+        </main>
+    </body>
 </html>

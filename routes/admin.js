@@ -150,7 +150,6 @@ router.get("/validate-result", requireSession, (req, res) => {
                         if (err) {
                             reject(err);
                         } else {
-                            console.log(idActualRace);
                             resolve(idActualRace);
                         }
                     }

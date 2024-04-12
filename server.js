@@ -104,7 +104,35 @@ app.get("/circuits", requireSession, async (req, res) => {
 });
 
 app.get("/classement", requireSession, async (req, res) => {
-    res.render("classement", { idpp: req.session.user.idpp});
+    var data;
+    await new Promise((resolve, reject) => {
+        db.all(`SELECT * FROM points`, function (err, rows) {
+            if (err) {
+                reject(err);
+            } else {
+                data = rows;
+                resolve(rows);
+            }
+        });
+    });
+    // Calculer le total de points pour chaque utilisateur
+    const userPoints = {};
+    data.forEach((entry) => {
+        if (userPoints[entry.idUser]) {
+            userPoints[entry.idUser] += entry.points;
+        } else {
+            userPoints[entry.idUser] = entry.points;
+        }
+    });
+
+    const sortedUserPoints = Object.entries(userPoints).sort(
+        (a, b) => b[1] - a[1]
+    );
+
+    res.render("classement", {
+        idpp: req.session.user.idpp,
+        tableauClassement: sortedUserPoints,
+    });
 });
 
 const settingsRoutes = require("./routes/settings");
