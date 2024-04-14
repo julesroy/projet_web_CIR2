@@ -33,51 +33,6 @@ app.get("/", requireSession, async (req, res) => {
     });
 });
 
-app.post("/update-order", requireSession, async (req, res) => {
-    var idActualRace;
-    await new Promise((resolve, reject) => {
-        db.get(
-            `SELECT idRace FROM races WHERE actual = 1`,
-            function (err, row) {
-                if (err) {
-                    reject(err);
-                } else {
-                    idActualRace = row.idRace;
-                    resolve(row);
-                }
-            }
-        );
-    });
-
-    var order = JSON.stringify(req.body.order);
-    var idUser = req.session.user.idUser;
-    db.run(
-        "INSERT INTO standings(standing, idUser, idRace) VALUES(?, ?, ?)",
-        [order, idUser, idActualRace],
-        function (err) {
-            if (err) {
-                res.send(err.message);
-            }
-        }
-    );
-});
-
-app.get("/get-order", requireSession, function (req, res) {
-    var idUser = req.session.user.idUser;
-    db.get(
-        "SELECT standing FROM standings WHERE idUser = ? ORDER BY idStanding DESC LIMIT 1",
-        [idUser],
-        function (err, row) {
-            if (err) {
-                res.send(err.message);
-            } else {
-                var order = row ? JSON.parse(row.standing) : [];
-                res.send({ order: order });
-            }
-        }
-    );
-});
-
 const userAuthentification = require("./routes/authentification");
 app.use("/", userAuthentification);
 
@@ -136,6 +91,9 @@ app.get("/classement", requireSession, async (req, res) => {
         tableauClassement: sortedUserPoints,
     });
 });
+
+const predictions = require("./routes/prediction");
+app.use("/", predictions);
 
 const settingsRoutes = require("./routes/settings");
 app.use("/", settingsRoutes);
